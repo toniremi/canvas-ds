@@ -157,7 +157,7 @@ This theme allows customizations to artwork without the need to edit the source 
 
 ## **Acknowledgments**
 
-**Code structure, file layouts, tips, and theme paths** were guided by the outlines from [Ant - ArtBookNext](https://github.com/anthonycaccese/art-book-next-es)
+**Code structure, file layouts, tips, and theme paths** were guided by the outlines from [Ant - ArtBookNext](https://github.com/anthonycaccese/art-book-next-es) as well as with the help and inspirtion from [**dii-ess-aye**](https://github.com/beebono/dii-ess-aye) to achieve dual screen layout.
 
 **Artwork was designed and created by the following artists and credit is provided to them.**
 - Most of the dual screen layout has been inspired by the [dii-ess-aye](https://github.com/beebono/dii-ess-aye) theme created by [beebono](https://github.com/beebono)
