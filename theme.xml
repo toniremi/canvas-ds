@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+Theme Name: Canvas-ds-Batocera
+Version: 1.0
+Author: Siddy212
+Licnese: Creative Commons CC-BY-NC-SA
+-->
+<theme defaultTransition="instant">
+	<formatVersion>7</formatVersion>
+
+	<!-- Includes -->
+	<!-- ~~~~~~~~ -->
+	<include>./fonts.xml</include>
+	<include>./file_paths.xml</include>
+	<include>./_inc/systems/metadata/${system.theme}.xml</include>
+
+	<!--
+   ///
+   Aspect Ratios
+   ///
+   -->
+
+	<subset name="aspect-ratio" displayName="Aspect Ratio">
+		<include if="{screen.ratio} == '4/3'" name="4-3-auto" displayName="Automatic" />
+		<include name="4-3" displayName="4:3" />
+	</subset>
+
+   <!--
+   ///
+   Variables
+   ///
+   -->
+   <variables>
+      <themeCustomizationsPath
+        >${distributionPath}theme-customizations/canvas</themeCustomizationsPath>
+   </variables>
+
+   <!--
+   ///
+   Subset: System View Options
+   ///
+   -->
+
+	<subset name="system-view" displayName="System View">
+      <include name="grid" displayName="Grid" />
+	</subset>
+
+   <!--
+   ///
+   Subset: System Grid Sizes
+   ///
+   -->
+
+	<subset
+        name="sysgridsize"
+        ifSubset="system-view:grid"
+        displayName="System Grid Size"
+    >
+		<include name="automatic" displayName="Automatic" />
+		<include name="3x1" displayName="3X1" />
+		<include name="3x2" displayName="3X2" />
+		<include name="3x3" displayName="3X3" />
+		<include name="4x2" displayName="4X2" />
+		<include name="4x3" displayName="4X3" />
+		<include name="4x4" displayName="4X4" />
+		<include name="5x2" displayName="5X2" />
+		<include name="5x3" displayName="5X3" />
+		<include name="5x4" displayName="5X4" />
+	</subset>
+
+   <!--
+   ///
+   Subset: Icon Scheme
+   ///
+   -->
+
+   <subset name="icon-scheme" displayName="System Icon Style">
+      <include name="art" displayName="Art" />
+      <include name="icon" displayName="Icons" />
+      <include name="custom-art" displayName="Custom (Art)" />
+      <include name="custom-icon" displayName="Custom (Icons)" />
+   </subset>
+
+   <!--
+   ///
+   Subset: Color Scheme
+   ///
+   -->
+
+   <subset name="color-scheme" displayName="Color Scheme">
+      <include name="dark" displayName="Dark" />
+      <include name="light" displayName="Light" />
+      <include name="retro" displayName="Retro" />
+      <include name="neon" displayName="Neon" />
+      <include name="pastel" displayName="Pastel" />
+      <include name="sony" displayName="Sony" />
+      <include name="snes" displayName="Snes" />
+      <include name="famicom" displayName="Famicom" />
+      <include name="custom" displayName="Custom" />
+   </subset>
+   <include>./colors.xml</include>
+   <include
+        ifSubset="color-scheme:custom"
+    >${themeCustomizationsPath}/colors.xml</include>
+   <!--
+   ///
+   Subset: Font Size
+   ///
+   -->
+
+   <subset name="font-size" displayName="Font Size">
+      <include name="medium" displayName="Default" />
+      <include name="small" displayName="Small" />
+      <include name="large" displayName="Large" />
+   </subset>
+
+   <!--
+   ///
+   Subset: Game Metadata
+   ///
+   -->
+
+   <subset name="metadata" displayName="Metadata">
+      <include name="on" displayName="On" />
+      <include name="off" displayName="Off" />
+   </subset>
+
+   <!--
+   ///
+   Subset: Game Metadata Option
+   ///
+   -->
+
+   <subset name="metadata-option" displayName="Metadata Rating/Playtime">
+      <include name="rating" displayName="Rating" />
+      <include name="playtime" displayName="Playtime" />
+   </subset>
+	<!--
+   ///
+   Aspect Ratios Variables
+   ///
+   -->
+   <include
+        ifSubset="aspect-ratio:4-3|4-3-auto"
+    >./_inc/variables/aspect-ratio-4-3-variables.xml</include>
+
+
+	<!-- SystemView Include -->
+	<!-- ~~~~~~~~~~~~~ -->
+
+	<include ifSubset="system-view:grid">./_inc/system-view/grid.xml</include>
+
+	<!-- Screen View -->
+	<!-- ~~~~~~~~~~~ -->
+   <view name="screen">
+      <!-- Start: Resets -->
+      <controllerActivity name="controllerActivity">
+         <visible>false</visible>
+      </controllerActivity>
+      <batteryIndicator name="batteryIndicator">
+         <visible>false</visible>
+      </batteryIndicator>
+      <text name="clock">
+         <pos>1 1</pos>
+      </text>
+      <!-- End: Resets -->
+      <stackpanel name="system-indicators" extra="true">
+        <visible>true</visible>
+         <h>${indicatorFontSize}</h>
+         <pos>0.25 0.027</pos><!-- 0 20 -->
+         <!--<pos>0 0.027</pos> 0 20 -->
+         <orientation>horizontal</orientation>
+         <clock name="system-clock">
+			<color>${systemInfoColor}</color>
+            <fontPath>${fontBold}</fontPath>
+            <fontSize>${indicatorFontSize}</fontSize>
+            <lineSpacing>1</lineSpacing>
+         </clock>
+         <networkIcon name="system-network-icon">
+            <maxSize>1 1</maxSize>
+			<color>${systemInfoColor}</color>
+            <networkIcon>./_inc/images/network-icon-on.svg</networkIcon>
+            <planemodeIcon>./_inc/images/network-icon-off.svg</planemodeIcon>
+         </networkIcon>
+         <batteryIcon name="system-battery-icon">
+            <maxSize>1 1</maxSize>
+			<color>${systemInfoColor}</color>
+            <full>./_inc/images/battery-icon-100.svg</full>
+            <at75>./_inc/images/battery-icon-75.svg</at75>
+            <at50>./_inc/images/battery-icon-50.svg</at50>
+            <at25>./_inc/images/battery-icon-25.svg</at25>
+            <empty>./_inc/images/battery-icon-0.svg</empty>
+            <incharge>./_inc/images/battery-icon-charging.svg</incharge>
+         </batteryIcon>
+         <batteryText name="system-battery-text">
+			<color>${systemInfoColor}</color>
+            <fontPath>${fontBold}</fontPath>
+            <fontSize>${indicatorFontSize}</fontSize>
+            <lineSpacing>1</lineSpacing>
+         </batteryText>
+      </stackpanel>
+   </view>
+
+
+   <!--
+   ///
+   View: Menu
+   ///
+   -->
+   <view name="menu">
+
+      <menuText name="menutitle">
+         <fontPath>${fontBold}</fontPath>
+         <fontSize>0.03</fontSize>
+         <color>${helpTextColor}</color>
+      </menuText>
+      <menuText name="menufooter">
+         <fontPath>${fontLight}</fontPath>
+         <fontSize>0.025</fontSize>
+         <color>${helpTextColor}</color>
+      </menuText>
+      <menuText name="menutext">
+         <fontPath>${fontBold}</fontPath>
+         <fontSize>0.035</fontSize>
+         <color>${helpTextColor}</color>
+         <separatorColor>${gamelistSelectorColor}</separatorColor>
+         <selectedColor>${gamelistSelectedColor}</selectedColor>
+         <selectorColor>${gamelistSelectorColor}</selectorColor>
+      </menuText>
+      <menuTextSmall name="menutextsmall">
+         <fontPath>${fontBold}</fontPath>
+         <fontSize>0.025</fontSize>
+         <color>${helpTextColor}</color>
+      </menuTextSmall>
+      <menuGroup name="menugroup">
+         <fontPath>${fontRegular}</fontPath>
+         <fontSize>0.0325</fontSize>
+         <color>${helpTextColor}</color>
+         <separatorColor>${helpTextColor}</separatorColor>
+         <backgroundColor>00000000</backgroundColor>
+         <lineSpacing>2.5</lineSpacing>
+      </menuGroup>
+      <menuTextEdit name="menutextedit">
+         <inactive>./_inc/images/menu-textinput.png</inactive>
+         <active>./_inc/images/menu-textinput-active.png</active>
+      </menuTextEdit>
+      <menuBackground name="menubg">
+         <color>${menuBackgroundColor}</color>
+         <cornerSize>20 20</cornerSize>
+      </menuBackground>
+      <menuIcons name="menuicons">
+         <iconSystem>./_inc/images/menu-icon-system.svg</iconSystem>
+         <iconUpdates>./_inc/images/menu-icon-update.svg</iconUpdates>
+         <iconControllers
+            >./_inc/images/menu-icon-controller.svg</iconControllers>
+         <iconGames>./_inc/images/menu-icon-games.svg</iconGames>
+         <iconUI>./_inc/images/menu-icon-ui.svg</iconUI>
+         <iconSound>./_inc/images/menu-icon-sound.svg</iconSound>
+         <iconNetwork>./_inc/images/menu-icon-network.svg</iconNetwork>
+         <iconScraper>./_inc/images/menu-icon-scraper.svg</iconScraper>
+         <iconAdvanced>./_inc/images/menu-icon-advanced.svg</iconAdvanced>
+         <iconQuit>./_inc/images/menu-icon-quit.svg</iconQuit>
+         <iconRetroachievements
+            >./_inc/images/menu-icon-achievements.svg</iconRetroachievements>
+         <iconKodi>./_inc/images/menu-icon-kodi.svg</iconKodi>
+         <iconRestart>./_inc/images/menu-icon-restart.svg</iconRestart>
+         <iconShutdown>./_inc/images/menu-icon-shutdown.svg</iconShutdown>
+         <iconFastShutdown
+            >./_inc/images/menu-icon-shutdown.svg</iconFastShutdown>
+      </menuIcons>
+   </view>
+
+
+	<!-- All Views -->
+	<!-- ~~~~~~~~~~ -->
+
+	<view name="system, grid">
+        <helpsystem name="help">
+            <pos>1 1</pos>
+            <visible>false</visible>
+        </helpsystem>
+		<!-- System Backgrounds -->
+		<image name="background-art" extra="true">
+			<path
+                ifSubset="color-scheme:light|dark|retro|neon|sony|snes|famicom|pastel"
+            >${backgroundArtPath}.jpg</path>
+			<path
+                ifSubset="color-scheme:light|dark|retro|neon|sony|snes|famicom|pastel"
+            >${backgroundArtPath}.webp</path>
+			<path
+                ifSubset="color-scheme:custom"
+            >${themeCustomizationsPath}/wallpapers/custom.webp</path>
+			<path
+                ifSubset="color-scheme:custom"
+            >${themeCustomizationsPath}/wallpapers/custom.jpg</path>
+			<path ifSubset="color-scheme:custom">${themePath}/wallpapers/custom.jpg</path>
+			<path ifSubset="color-scheme:custom">${themePath}/wallpapers/custom.webp</path>
+			<origin>0.5 0.5</origin>
+			<pos>0.5 0.5</pos>
+			<minSize>1 1</minSize>
+			<linearSmooth>true</linearSmooth>
+			<zIndex>0</zIndex>
+		</image>
+	</view>
+
+	<!-- System View: All -->
+	<!-- ~~~~~~~~~~~ -->
+
+	<view name="system">
+        <!-- Help System -->
+    	<helpsystem name="help">
+           	<origin>0.5 0.5</origin>
+            <pos>0.5 ${helpPos}</pos>
+            <size>0.333 ${metaDatafontSize}</size>
+    		<fontSize>${helpFontSize}</fontSize>
+    		<fontPath>${fontBold}</fontPath>
+    		<textColor>${helpTextColor}</textColor>
+    		<iconColor>${helpTextColor}</iconColor>
+    		<iconA>./_inc/images/help-button-east.svg</iconA>
+    		<iconB>./_inc/images/help-button-south.svg</iconB>
+    		<iconX>./_inc/images/help-button-north.svg</iconX>
+    		<iconY>./_inc/images/help-button-west.svg</iconY>
+            <visible>true</visible>
+    	</helpsystem>
+        <image name="system_hero_art" extra="true">
+            <path>./_inc/systems/hero/${system.theme}.webp</path>
+            <default>./_inc/systems/hero/_default.webp</default>
+            <pos>0.1667 0.44</pos>
+            <origin>0.5 0.5</origin>
+            <maxSize>0.32 0.7</maxSize>
+            <zIndex>10</zIndex>
+            <storyboard>
+                <animation
+                    event="activate"
+                    property="opacity"
+                    from="0"
+                    to="1"
+                    duration="400"
+                    mode="easeOut"
+                />
+                <animation
+                    event="activate"
+                    property="x"
+                    from="0.1667"
+                    to="0.1667"
+                    duration="0"
+                    mode="instant"
+                />
+                <animation
+                    event="activate"
+                    property="y"
+                    from="0.5"
+                    to="0.44"
+                    duration="500"
+                    mode="easeOut"
+                />
+            </storyboard>
+        </image>
+		<image name="gamesicon" extra="true">
+			<origin ifSubset="system-view:grid">1 0.5</origin>
+			<path>./_inc/images/gamescount.svg</path>
+			<opacity>1</opacity>
+			<color>${systemInfoColor}</color>
+			<linearSmooth>true</linearSmooth>
+			<zIndex>3</zIndex>
+			<visible ifSubset="system-view:grid">true</visible>
+		</image>
+		<image name="countline" extra="true">
+			<origin>0.5 0.5</origin>
+			<path>./_inc/images/countline.svg</path>
+			<opacity>1</opacity>
+			<color>${systemInfoColor}</color>
+			<linearSmooth>true</linearSmooth>
+			<zIndex>3</zIndex>
+			<visible ifSubset="system-view:grid">false</visible>
+		</image>
+		<text name="systemInfo">
+			<fontPath>${fontBold}</fontPath>
+			<zIndex>3</zIndex>
+			<color>${systemInfoColor}</color>
+			<lineSpacing>1</lineSpacing>
+            <size>0 ${systemDescriptionFontSize}</size>
+            <fontSize>${systemDescriptionFontSize}</fontSize>
+		</text>
+		<text name="systemInfo" ifSubset="system-view:grid">
+			<origin>0 0.5</origin>
+			<alignment>left</alignment>
+		</text>
+		<text name="systemInfoGrid" extra="true">
+			<text>{system:total}</text>
+			<fontPath>${fontBold}</fontPath>
+			<origin>0 0.5</origin>
+			<zIndex>3</zIndex>
+			<color>${systemInfoColor}</color>
+			<alignment>left</alignment>
+			<lineSpacing>1</lineSpacing>
+            <size>0 ${systemDescriptionFontSize}</size>
+            <fontSize>${systemDescriptionFontSize}</fontSize>
+		</text>
+	</view>
+
+	<!-- Gamelist: System Logo -->
+	<!-- ~~~~~~~~~~~~~ -->
+	<view name="grid">
+		<image name="logo" origin="0.5 0.5" linearSmooth="true">
+		    <pos>0.1667 0.44</pos>
+			<path>./_inc/systems/logos/${system.theme}.svg</path>
+			<zIndex>2</zIndex>
+			<color>${systemInfoColor}</color>
+			<visible>true</visible>
+			<opacity>0.8</opacity>
+		</image>
+
+	</view>
+	<!-- Gamelist: Full Metadata Call-->
+	<!-- ~~~~~~~~~~~~~ -->
+	<view name="grid">
+		<image name="playtime-logo" origin="0.5 0.5" linearSmooth="true" extra="true">
+			<path>./_inc/images/playtime-icon.svg</path>
+			<zIndex>4</zIndex>
+			<color>${gameMetadataColor}</color>
+			<opacity>0.7</opacity>
+			<visible ifSubset="metadata-option:rating">false</visible>
+			<visible ifSubset="metadata-option:playtime">true</visible>
+		</image>
+		<image name="md_marquee">
+			<origin>0.5 0.5</origin>
+			<zIndex>6</zIndex>
+			<visible>${visiblemix}</visible>
+		</image>
+		<image name="md_image">
+			<origin>0.5 0.5</origin>
+			<zIndex>5</zIndex>
+		</image>
+		<image name="md_thumbnail">
+			<origin ifSubset="media-type:miximage">0 0.5</origin>
+			<origin ifSubset="media-type:boxart">0.5 0.5</origin>
+			<zIndex>6</zIndex>
+		</image>
+		<video name="md_video">
+			<origin>0.5 0.5</origin>
+			<delay>3</delay>
+			<roundCorners>0.005</roundCorners>
+			<showSnapshotNoVideo>false</showSnapshotNoVideo>
+			<zIndex>8</zIndex>
+		</video>
+		<datetime name="md_releasedate,md_lastplayed">
+			<origin>0 0.5</origin>
+			<fontPath>${fontBold}</fontPath>
+			<color>${gameMetadataColor}</color>
+			<lineSpacing>1</lineSpacing>
+		</datetime>
+		<text
+            name="md_name,md_players,md_genre,md_developer,md_publisher,md_playcount,md_gametime_custom"
+        >
+			<origin>0 0.5</origin>
+			<fontPath>${fontBold}</fontPath>
+			<color>${gameMetadataColor}</color>
+			<lineSpacing>1</lineSpacing>
+			<value>Unknown</value>
+		</text>
+		<datetime name="md_releasedate">
+			<value>Unknown</value>
+			<format>%Y</format>
+		</datetime>
+		<datetime name="md_lastplayed">
+			<value>Unknown</value>
+		</datetime>
+		<rating name="md_rating">
+			<origin>0.5 0.5</origin>
+			<filledPath>./_inc/images/icon-star-filled.svg</filledPath>
+			<unfilledPath>./_inc/images/icon-star-unfilled.svg</unfilledPath>
+			<color>${gameMetadataColor}</color>
+			<visible ifSubset="metadata-option:rating">true</visible>
+			<visible ifSubset="metadata-option:playtime">false</visible>
+		</rating>
+		<text name="md_gametime_custom" extra="true">
+			<visible ifSubset="metadata-option:rating">false</visible>
+			<visible ifSubset="metadata-option:playtime">true</visible>
+			<text>{game:gametime} > 0 ? formatseconds({game:gametime}) : "Never"</text>
+			<color>${gameMetadataColor}</color>
+			<autoScroll>horizontal</autoScroll>
+			<autoScrollSpeed>50</autoScrollSpeed>
+			<autoScrollDelay>500000</autoScrollDelay>
+			<zIndex>4</zIndex>
+		</text>
+		<text name="md_genre">
+			<forceUppercase>false</forceUppercase>
+			<autoScroll>horizontal</autoScroll>
+			<autoScrollSpeed>50</autoScrollSpeed>
+			<autoScrollDelay>5000</autoScrollDelay>
+		</text>
+		<text name="md_name">
+			<autoScroll>horizontal</autoScroll>
+			<autoScrollSpeed>50</autoScrollSpeed>
+			<autoScrollDelay>5000</autoScrollDelay>
+			<alignment>left</alignment>
+		</text>
+		<text name="md_description">
+			<origin>0.5 0</origin>
+			<fontPath>${fontRegular}</fontPath>
+			<autoScroll>vertical</autoScroll>
+			<autoScrollSpeed>50</autoScrollSpeed>
+			<autoScrollDelay>5000</autoScrollDelay>
+			<color>${gameMetadataColor}</color>
+		</text>
+	</view>
+	<view name="grid">
+		<image name="md_marquee">
+			<visible>false</visible>
+		</image>
+	</view>
+
+
+
+
+
+	<!-- Small Detailed Metadata Backgrounds -->
+	<!-- ~~~~~~~~~~~~~ -->
+	<view name="grid" ifSubset="font-size:small,metadata:on">
+		<!-- Start: Extended Metadata -->
+		<image name="game-metadata-background-shadow-extended" extra="true">
+			<origin>0.5 0.5</origin>
+			<zIndex>2</zIndex>
+			<linearSmooth>true</linearSmooth>
+		</image>
+		<image name="game-metadata-background-image-extended" extra="true">
+			<origin>0.5 0.5</origin>
+			<zIndex>3</zIndex>
+			<linearSmooth>true</linearSmooth>
+		</image>
+	</view>
+
+
+	<!-- Medium/Large Metadata Backgrounds -->
+	<!-- ~~~~~~~~~~~~~ -->
+	<view name="grid" ifSubset="font-size:medium|large,metadata:on">
+		<image name="game-metadata-background-shadow-base" extra="true">
+			<origin>0.5 0.5</origin>
+			<zIndex>2</zIndex>
+			<linearSmooth>true</linearSmooth>
+		</image>
+		<image name="game-metadata-background-image-base" extra="true">
+			<origin>0.5 0.5</origin>
+			<zIndex>3</zIndex>
+			<linearSmooth>true</linearSmooth>
+		</image>
+	</view>
+
+	<!-- Medium/Large Metadata Toggle -->
+	<!-- ~~~~~~~~~~~~~ -->
+	<view name="grid" ifSubset="font-size:medium|large,metadata:on">
+		<text name="md_players">
+			<visible>false</visible>
+		</text>
+		<text name="md_developer">
+			<visible>false</visible>
+		</text>
+		<text name="md_publisher" extra="true">
+			<visible>false</visible>
+		</text>
+		<datetime name="md_lastplayed">
+			<visible>false</visible>
+		</datetime>
+		<text name="md_playcount" extra="true">
+			<visible>false</visible>
+		</text>
+	</view>
+
+
+	<!-- Game Grid View -->
+	<!-- ~~~~~~~~~~~ -->
+
+	<include name="grid">./grid.xml</include>
+
+	<!-- Off Metadata Toggle -->
+	<!-- ~~~~~~~~~~~~~ -->
+	<view name="grid" ifSubset="metadata:off">
+		<image name="game-metadata-background-shadow-base" extra="true">
+			<visible>false</visible>
+		</image>
+		<image name="game-metadata-background-image-base" extra="true">
+			<visible>false</visible>
+		</image>
+		<datetime name="md_releasedate,md_lastplayed">
+			<visible>false</visible>
+		</datetime>
+		<text
+            name="md_name,md_players,md_genre,md_developer,md_publisher,md_playcount,md_gametime_custom"
+        >
+			<visible>false</visible>
+		</text>
+		<text name="md_description">
+			<visible>false</visible>
+		</text>
+		<rating name="md_rating">
+			<visible>false</visible>
+		</rating>
+		<image name="playtime-logo">
+			<visible>false</visible>
+		</image>
+	</view>
+
+	<!--
+   ///
+   Aspect Ratios
+   ///
+   -->
+   <include
+        ifSubset="aspect-ratio:4-3|4-3-auto"
+    >./aspect-ratio-4-3.xml</include>
+
+</theme>

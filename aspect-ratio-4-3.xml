@@ -1,0 +1,243 @@
+<theme>
+	<formatVersion>7</formatVersion>
+
+<!--
+4:3 aspect ratio
+based on 640x480
+-->
+
+	<!-- Metadata Image variations -->
+	<!-- ~~~~~~~~~~~ -->
+   	<variables ifSubset="media-type:image">
+		<visiblemix>false</visiblemix>
+	</variables>
+	<variables ifSubset="media-type:boxart">
+		<visiblemix>false</visiblemix>
+	</variables>
+   	<variables ifSubset="media-type:miximage">
+		<visiblemix>true</visiblemix>
+	</variables>
+
+	<!-- System View Grid -->
+	<!-- ~~~~~~~~~~~ -->
+
+	<view name="system" ifSubset="system-view:grid">
+		<imagegrid name="imagegrid">
+			<h>0.85</h>
+			<w>0.333</w>
+		</imagegrid>
+		<image name="gamesicon" extra="true">
+            <pos>0.02 0.05</pos>
+            <size>0 ${systemInfoFontSize}</size>
+		</image>
+		<text name="systemInfoGrid">
+            <pos>0.025 0.05</pos>
+			<size>0 ${systemInfoFontSize}</size>
+            <fontSize>${systemInfoFontSize}</fontSize>
+		</text>
+	</view>
+
+
+	<!-- System View -->
+	<!-- ~~~~~~~~~~~ -->
+
+	<view name="screen">
+		<stackpanel name="system-indicators" extra="true">
+		<w>0.333</w><!-- 620 -->
+		<separator>10</separator>
+		</stackpanel>
+    </view>
+
+
+	<!-- Logo Variations -->
+	<!-- ~~~~~~~~~~~~~ -->
+
+	<view name="grid" ifSubset="metadata:on">
+	    <image name="md_image">
+            <pos>0.167 0.5</pos>
+            <origin>0.5 0.5</origin>
+            <maxSize>0.35 0.6</maxSize>
+            <path>{game:image}</path>
+            <default>{game:thumbnail}</default>
+            <visible>false</visible>
+        </image>
+
+        <video name="md_video">
+            <pos>0.167 0.5</pos>
+            <origin>0.5 0.5</origin>
+            <maxSize>0.35 0.6</maxSize>
+            <effect>none</effect>
+            <delay>1.5</delay>
+            <showSnapshotNoVideo>true</showSnapshotNoVideo>
+            <showSnapshotDelay>true</showSnapshotDelay>
+            <snapshotSource>image</snapshotSource>
+        </video>
+		<image name="logo">
+		    <pos>0.1667 0.9</pos>
+			<maxSize>0.25 .08</maxSize>
+		</image>
+	</view>
+
+	<view name="grid" ifSubset="metadata:off">
+	    <image name="md_image">
+            <pos>0.167 0.5</pos>
+            <origin>0.5 0.5</origin>
+            <maxSize>0.35 0.6</maxSize>
+            <path>{game:image}</path>
+            <default>{game:thumbnail}</default>
+            <visible>false</visible>
+        </image>
+
+        <video name="md_video">
+            <pos>0.167 0.5</pos>
+            <origin>0.5 0.5</origin>
+            <maxSize>0.35 0.6</maxSize>
+            <effect>none</effect>
+            <delay>1.5</delay>
+            <showSnapshotNoVideo>true</showSnapshotNoVideo>
+            <showSnapshotDelay>true</showSnapshotDelay>
+            <snapshotSource>image</snapshotSource>
+        </video>
+		<image name="logo">
+		    <pos>0.1667 0.9</pos>
+			<maxSize>0.23 .07</maxSize>
+		</image>
+	</view>
+
+
+	<!-- Small Grid View Detailed-->
+	<!-- ~~~~~~~~~~~~~ -->
+	<view name="grid" ifSubset="font-size:small,metadata:on">
+	<!-- Metadata Toggle-->
+		<image name="md_marquee,md_thumbnail">
+			<visible>false</visible>
+		</image>
+		<text name="md_description">
+			<visible>false</visible>
+		</text>
+
+	<!-- Metadata-->
+		<image name="game-metadata-background-shadow-extended" extra="true">
+             <pos>0.5 0.87</pos>
+            <size>0.25 0.13</size>
+            <path
+            >./_inc/images/simple/gamelist-metadata-background-shadow-extended.webp</path>
+		</image>
+		<image name="game-metadata-background-image-extended" extra="true">
+			<pos>0.5 0.87</pos>
+            <size>0.25 0.13</size>
+			<path
+            >./_inc/images/simple/${gamelistMetadataBackgroundImage}-extended.webp</path>
+		</image>
+		<rating name="md_rating">
+			 <pos>0.44 0.907</pos>
+            <size>0 0.025</size>
+		</rating>
+		<datetime name="md_releasedate">
+			<pos>0.39 0.907</pos>
+            <size>0.05 ${metaDatafontSize}</size>
+			<fontSize>${metaDatafontSize}</fontSize>
+		</datetime>
+		<text name="md_name">
+			 <pos>0.39 0.83</pos>
+            <size>.364 ${metaDatafontSize}</size>
+			<fontSize>${metaDatafontSize}</fontSize>
+		</text>
+		<text name="md_players">
+			<visible>false</visible>
+		</text>
+		<text name="md_genre">
+            <pos>0.48 0.907</pos>
+            <size>0.174 ${metaDatafontSize}</size>
+			<fontSize>${metaDatafontSize}</fontSize>
+		</text>
+		<text name="md_developer">
+			<visible>false</visible>
+		</text>
+		<text name="md_publisher" extra="true">
+			<visible>false</visible>
+		</text>
+		<datetime name="md_lastplayed">
+			<value>Never</value>
+            <pos>0.58 0.83</pos>
+            <size>0.099 ${metaDatafontSize}</size>
+			<size>0.1 ${metaDatafontSize}</size>
+			<fontSize>${metaDatafontSize}</fontSize>
+		</datetime>
+		<text name="md_playcount" extra="true">
+            <pos>0.58 0.907</pos>
+            <size>0.099 ${metaDatafontSize}</size>
+			<fontSize>${metaDatafontSize}</fontSize>
+		</text>
+		<text name="md_gametime_custom" extra="true">
+			 <pos>0.55 0.919</pos>
+            <size>0.065 ${metaDatafontSize}</size>
+			<fontSize>${metaDatafontSize}</fontSize>
+		</text>
+		<image name="playtime-logo">
+			<pos>0.542 0.9185</pos>
+	        <size>0 0.025</size>
+		</image>
+	</view>
+
+	<!-- Medium/Large Grid View-->
+	<!-- ~~~~~~~~~~~~~ -->
+	<view name="grid" ifSubset="font-size:medium|large,metadata:on">
+
+		<!-- Metadata Toggle-->
+			<image name="md_marquee,md_thumbnail">
+				<visible>false</visible>
+			</image>
+			<text name="md_description">
+				<visible>false</visible>
+			</text>
+		<!-- Metadata-->
+		<image name="game-metadata-background-shadow-base" extra="true">
+            <pos>0.5 0.885</pos>
+            <size>0.3 0.1559172633</size>
+            <path
+            >./_inc/images/simple/gamelist-metadata-background-shadow-base.webp</path>
+		</image>
+		<image name="game-metadata-background-image-base" extra="true">
+            <pos>0.5 0.885</pos>
+            <size>0.3 0.11278434754</size>
+            <path
+            >./_inc/images/simple/${gamelistMetadataBackgroundImage}-base.webp</path>
+		</image>
+		<rating name="md_rating">
+            <pos>0.45 0.918</pos>
+            <size>0 0.027</size>
+		</rating>
+            <datetime name="md_releasedate">
+            <pos>0.375 0.918</pos>
+            <size>0.07 ${metaDatafontSize}</size>
+			<fontSize>${metaDatafontSize}</fontSize>
+		</datetime>
+		<text name="md_name">
+            <pos>0.375 0.8525</pos>
+            <size>.495 ${metaDatafontSize}</size>
+			<fontSize>${metaDatafontSize}</fontSize>
+		</text>
+		<text name="md_genre">
+            <pos>0.515 0.9185</pos>
+            <size>0.252 ${metaDatafontSize}</size>
+			<fontSize>${metaDatafontSize}</fontSize>
+		</text>
+		<text name="md_gametime_custom" extra="true">
+			 <pos>0.583 0.9185</pos>
+            <size>0.090 ${metaDatafontSize}</size>
+			<fontSize>${metaDatafontSize}</fontSize>
+		</text>
+		<image name="playtime-logo">
+			<pos>0.57 0.9185</pos>
+	        <size>0 0.030</size>
+		</image>
+	</view>
+
+	<view name="grid" ifSubset="metadata:off">
+			<image name="md_marquee,md_thumbnail">
+				<visible>false</visible>
+			</image>
+	</view>
+
+</theme>
