@@ -11,7 +11,6 @@ Licnese: Creative Commons CC-BY-NC-SA
 	<!-- Includes -->
 	<!-- ~~~~~~~~ -->
 	<include>./fonts.xml</include>
-	<include>./file_paths.xml</include>
 	<include>./_inc/systems/metadata/${system.theme}.xml</include>
 
 	<!--
@@ -31,8 +30,8 @@ Licnese: Creative Commons CC-BY-NC-SA
    ///
    -->
    <variables>
-      <themeCustomizationsPath
-        >${distributionPath}theme-customizations/canvas</themeCustomizationsPath>
+        <themeCustomizationsPath
+        >./theme-customizations</themeCustomizationsPath>
    </variables>
 
    <!--
@@ -280,27 +279,34 @@ Licnese: Creative Commons CC-BY-NC-SA
             <visible>false</visible>
         </helpsystem>
 		<!-- System Backgrounds -->
-		<image name="background-art" extra="true">
-			<path
-                ifSubset="color-scheme:light|dark|retro|neon|sony|snes|famicom|pastel"
-            >${backgroundArtPath}.jpg</path>
-			<path
-                ifSubset="color-scheme:light|dark|retro|neon|sony|snes|famicom|pastel"
-            >${backgroundArtPath}.webp</path>
-			<path
-                ifSubset="color-scheme:custom"
-            >${themeCustomizationsPath}/wallpapers/custom.webp</path>
-			<path
-                ifSubset="color-scheme:custom"
-            >${themeCustomizationsPath}/wallpapers/custom.jpg</path>
-			<path ifSubset="color-scheme:custom">${themePath}/wallpapers/custom.jpg</path>
-			<path ifSubset="color-scheme:custom">${themePath}/wallpapers/custom.webp</path>
-			<origin>0.5 0.5</origin>
-			<pos>0.5 0.5</pos>
-			<minSize>1 1</minSize>
-			<linearSmooth>true</linearSmooth>
-			<zIndex>0</zIndex>
-		</image>
+		<!-- Custom Backgrounds -->
+		<image name="background-art" extra="true" ifSubset="color-scheme:custom">
+            <path>${themeCustomizationsPath}/wallpapers/custom.webp</path>
+            <path>${themeCustomizationsPath}/wallpapers/custom.jpg</path>
+            <path>${themePath}/wallpapers/custom.jpg</path>
+            <default>${themePath}/wallpapers/custom.webp</default>
+
+            <origin>0.5 0.5</origin>
+            <pos>0.5 0.5</pos>
+            <minSize>1 1</minSize>
+            <linearSmooth>true</linearSmooth>
+            <zIndex>0</zIndex>
+        </image>
+        <!-- Included Color Backgrounds -->
+        <image
+            name="background-art"
+            extra="true"
+            ifSubset="color-scheme:light|dark|retro|neon|sony|snes|famicom|pastel"
+        >
+            <path>${backgroundArtPath}.jpg</path>
+            <path>${backgroundArtPath}.webp</path>
+
+            <origin>0.5 0.5</origin>
+            <pos>0.5 0.5</pos>
+            <minSize>1 1</minSize>
+            <linearSmooth>true</linearSmooth>
+            <zIndex>0</zIndex>
+        </image>
 	</view>
 
 	<!-- System View: All -->

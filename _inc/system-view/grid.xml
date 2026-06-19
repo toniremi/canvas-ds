@@ -109,7 +109,7 @@
                         >firstfile("${themePath}/_inc/systems/carousel-icons-art/" + {system:theme} + ".webp","${themePath}/_inc/systems/carousel-icons-art/_default.webp")</path>
 					<path
                             ifSubset="icon-scheme:custom-art"
-                        >firstfile("${themeCustomizationsPath}/artwork/" + {system:theme} + ".webp","${themeCustomizationsPath}/artwork/" + {system:theme} + ".png","${themePath}/_inc/systems/carousel-icons-art/" + {system:theme} + ".webp","${themePath}/_inc/systems/carousel-icons-art/_default.webp")</path>
+                        >firstfile("${themePath}/theme-customizations/artwork/" + {system:theme} + ".webp","${themePath}/theme-customizations/artwork/" + {system:theme} + ".png","${themePath}/_inc/systems/carousel-icons-art/" + {system:theme} + ".webp","${themePath}/_inc/systems/carousel-icons-art/_default.webp")</path>
             <pos>0.5 0.73</pos>
             <origin>0.5 1</origin>
             <maxSize>0.75 0.65</maxSize>
@@ -258,7 +258,7 @@
                         >firstfile("${themePath}/_inc/systems/carousel-icons-icons/" + {system:theme} + ".webp","${themePath}/_inc/systems/carousel-icons-icons/_default.webp")</path>
             <path
                             ifSubset="icon-scheme:custom-icon"
-                        >firstfile("${themeCustomizationsPath}/icons/" + {system:theme} + ".webp","${themeCustomizationsPath}/icons/" + {system:theme} + ".png","${themePath}/_inc/systems/carousel-icons-icons/" + {system:theme} + ".webp","${themePath}/_inc/systems/carousel-icons-icons/_default.webp")</path>
+                        >firstfile("${themePath}/theme-customizations/icons/" + {system:theme} + ".webp","${themePath}/theme-customizations/icons/" + {system:theme} + ".png","${themePath}/_inc/systems/carousel-icons-icons/" + {system:theme} + ".webp","${themePath}/_inc/systems/carousel-icons-icons/_default.webp")</path>
             <pos>0.5 0.45</pos>
             <origin>0.5</origin>
             <maxSize>0.8 0.9</maxSize>
