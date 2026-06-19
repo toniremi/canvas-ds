@@ -122,9 +122,11 @@ The `enable_theme_rgds.sh` from **dii-ess-aye** theme will also change your them
 
 This theme allows customizations to artwork without the need to edit the source XML. This follows the default Art-Book-Next customization directions for alignment.
 
+You will need to add your theme customizations on to the next folder found at the root of this theme in `theme-customizations/`.
+
 ### System View Art
 
-- Create the folder called `artwork` in the theme customization directory chosen above.
+- Create the folder called `artwork` in the theme customization directory mentioned above.
 - Create your custom artwork as a 1-1 aspect ratio square image.
 - Export your final images as webp, pngs, or jpgs.
 - They can be named:
@@ -147,13 +149,13 @@ This theme allows customizations to artwork without the need to edit the source 
 
 ### Wallpapers and Color Schemes
 
-- Locate the folder `wallpapers` within Emulation Stations' theme directory at: `share/themes/canvas-es/wallpapers`
+- Locate the folder `wallpapers` within Emulation Stations' theme directory at: `canvas-ds/wallpapers`
 - Inside are .webp images named after the color schemes.
 - Save over any of these with your new wallpaper (or a new jpg image) to change that color scheme look.
-- Alternate wallpapers are also stored in the "Alternate" folder as an example.
+- Alternate wallpapers are also stored in the "Alternate" folder as an example. **But this images have not been modified to look well on dual screen setup.**
 
-- Alternatively, use the color scheme `Custom` to point to a .jpg or .webp file named `custom` within `theme-customizations\canvas\wallpapers` as determined by the distribution choice above. The theme will default to `themes\canvas-es\wallpapers\custom` if no wallpaper is found.
-- Choosing `Custom` also allows a new color scheme to be created within `theme-customizations\canvas\colors.xml`. If no file is present, it will default to the custom color scheme within `themes\canvas-es\colors.xml` however this will be overriden if the theme is updated.
+- Alternatively, use the color scheme `Custom` to point to a .jpg or .webp file named `custom` within `theme-customizations\wallpapers`. The theme will default to `themes\canvas-ds\wallpapers\custom.webp` if no wallpaper is found.
+- Choosing `Custom` also allows a new color scheme to be created within `theme-customizations\colors.xml`. If no file is present, it will default to the custom color scheme within `themes\canvas-ds\colors.xml` however this will be overriden if the theme is updated.
 
 ## **Acknowledgments**
 
