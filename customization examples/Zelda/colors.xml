@@ -1,0 +1,32 @@
+﻿<theme>
+
+
+   <!--   System View: Art Default   -->
+
+  <!--   Change this section for Custom Color Scheme   -->
+   <variables ifSubset="color-scheme:custom">
+            <helpTextColor>E0E0E5</helpTextColor>
+           <backgroundColor>1D112B</backgroundColor>
+           <systemInfoColor>FFFFFF</systemInfoColor>
+           <systemCarouselTextColor>FFFFFF</systemCarouselTextColor>
+           <systemCarouselTextBackgroundColor>00000000</systemCarouselTextBackgroundColor>
+           <systemCarouselSelectorColor>00F0FF</systemCarouselSelectorColor>
+
+         <!--   Metadata/Gamelist Backgrounds:    -->
+         <!--   Change "light" to "dark","clear,"beige", or "retro" by replacing the "light" text below   -->
+         <gamelistLogoColor>FFFFFF</gamelistLogoColor>
+        <gamelistBackgroundImage>gamelist-background-dark</gamelistBackgroundImage>
+        <gamelistBackgroundOpacity>1</gamelistBackgroundOpacity>
+        <gamelistMetadataBackgroundImage>gamelist-metadata-background-dark</gamelistMetadataBackgroundImage>
+
+        <gamelistSelectorColor>B30F2D</gamelistSelectorColor>
+        <gamelistSelectedColor>FFFFFF</gamelistSelectedColor>
+        <gamelistPrimaryColor>FFFFFF</gamelistPrimaryColor>
+
+        <gamelistSecondaryColor>D6A2B3</gamelistSecondaryColor>
+        <gameMetadataColor>E0D0D8</gameMetadataColor>
+
+        <BackdropColor>4A081A</BackdropColor>
+        <backgroundArtOpacity>0.80</backgroundArtOpacity>
+        <menuBackgroundColor>22050F</menuBackgroundColor>
+   </variables>
