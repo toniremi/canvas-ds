@@ -6,7 +6,7 @@ Use these configurations as blueprints to build your own custom-tailored gaming 
 
 ## Available Examples
 
-### 1. Pokémon Modifications
+### 1. Pokémon
 
 This example will show you how to apply custom wallpaper, colors and also how to replace the system icons using Custom-Art icons option.
 
@@ -15,12 +15,21 @@ This example will show you how to apply custom wallpaper, colors and also how to
 * **Custom Art Icons** : Applied custom art icons from [anthonycaccese](https://github.com/anthonycaccese) amazing [alekfull-nx](https://github.com/anthonycaccese/alekfull-nx-es-de) theme 
 * **Path:** `./pokemon`
 
-### 2. The Legend of Zelda Modifications
+#### Pokemon customization preview
+
+![pokemon_systemview.png](https://github.com/toniremi/canvas-ds/blob/main/previews/customization/pokemon_systemview.png?raw=true)
+
+
+### 2. The Legend of Zelda
 This is a much simpler example that just changes wallpaper and colors.
 
 * **Wallpaper:** Applied the pokemon wallpaper from the [**dii-ess-aye**](https://github.com/beebono/dii-ess-aye) theme. 
 * **Colors:**: Applied custom colors to go with the wallpaper using purple and orange colors.
 * **Path:** `./zelda`
+
+#### Zelda customization preview
+
+![zelda_systemview.png](https://github.com/toniremi/canvas-ds/blob/main/previews/customization/zelda_systemview.png?raw=true)
 
 ---
 
@@ -29,12 +38,10 @@ This is a much simpler example that just changes wallpaper and colors.
 1. Navigate to the specific subfolder of the design you want to use (`pokemon` or `zelda`).
 2. Copy the contents of the folder into `theme-customizations`.
 3. If asked to replace files say yes.
-4. Fully restart EmulationStation to clear the VRAM texture cache and see the changes take effect.
+4. Remember to change `user interface settings` to use **custom** color and also **custom art** or **custom icon** if needed.
+4. Fully restart EmulationStation to see the changes take effect.
 
 ## How to customize your own theme
-
-Make sure to check custom.webp file inside `wallpapers`. That file will help you to create new wallpaper images.
-
 
 
 ### System View Art
@@ -71,6 +78,8 @@ Make sure to check custom.webp file inside `wallpapers`. That file will help you
 - Choosing `Custom` also allows a new color scheme to be created within `theme-customizations\colors.xml`. If no file is present, it will default to the custom color scheme within `themes\canvas-ds\colors.xml` however this will be overriden if the theme is updated.
 
 ### Wallpaper Creation and Cutting Guide (Dual Screen)
+
+Make sure to check custom.webp file inside `wallpapers`. That file will help you to create new wallpaper images.
 
 To create a single, continuous wallpaper that flows correctly across the top and bottom screens of your device, you must create a wide **1920 x 480** canvas, structured as three (3) distinct **640x480** sections side-by-side.
 
