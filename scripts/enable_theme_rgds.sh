@@ -22,11 +22,18 @@ output DSI-2 bg #000000 solid_color
 output DSI-2 allow_tearing yes
 output DSI-2 max_render_time off
 for_window [title=".*(Secondary|\[w2\]|Sub|Bottom|Screen 2|GamePad).*"] move window to output DSI-1
-for_window [title="RetroArch\s(melonDS|DeSmuME|VecX|MAME|FinalBurn|FB Alpha).*"] exec /usr/bin/vertical-check
+for_window [title="RetroArch.*"] exec /usr/bin/vertical-check
+for_window [app_id="lowerdeck"] floating enable, fullscreen enable, move window to output DSI-1
+no_focus [app_id="lowerdeck"]
+exec_always swaymsg '[app_id="emulationstation"]' seat seat0 attach "0:0:wlr_virtual_keyboard_v1"
+exec_always swaymsg '[app_id="emulationstation"]' seat seat1 attach "0:0:wlr_virtual_keyboard_v1"
+for_window [title=".*(Secondary|\[w2\]|Sub|Bottom|Screen 2|GamePad).*"] output DSI-1 power on
 for_window [app_id="drastic"] input "1046:911:Goodix_Capacitive_TouchScreen" map_to_output DSI-2
 for_window [app_id="emulationstation"] reload
 exec_always swaymsg '[app_id="emulationstation"]' floating enable, fullscreen disable, move absolute position 0 0
 exec_always swaymsg '[app_id="emulationstation"]' focus
+exec_always swaymsg '[app_id="emulationstation"]' seat seat1 attach "1046:911:Goodix_Capacitive_TouchScreen"
+exec_always swaymsg '[app_id="emulationstation"]' seat seat1 fallback yes
 EOF
 
 swaymsg reload
