@@ -157,6 +157,11 @@ You will need to add your theme customizations on to the next folder found at th
 - Alternatively, use the color scheme `Custom` to point to a .jpg or .webp file named `custom` within `theme-customizations\wallpapers`. The theme will default to `themes\canvas-ds\wallpapers\custom.webp` if no wallpaper is found.
 - Choosing `Custom` also allows a new color scheme to be created within `theme-customizations\colors.xml`. If no file is present, it will default to the custom color scheme within `themes\canvas-ds\colors.xml` however this will be overriden if the theme is updated.
 
+### Customization Examples
+I have included 2 examples on how to customize the theme.
+
+Check them out along with further explanation on how to customize the theme [here](https://github.com/toniremi/canvas-ds/blob/main/customization%20examples/README.md)
+
 ## **Acknowledgments**
 
 **Code structure, file layouts, tips, and theme paths** were guided by the outlines from [Ant - ArtBookNext](https://github.com/anthonycaccese/art-book-next-es) as well as with the help and inspiration from [**dii-ess-aye**](https://github.com/beebono/dii-ess-aye) to achieve dual screen layout on RG-DS
