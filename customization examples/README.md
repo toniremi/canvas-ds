@@ -76,27 +76,4 @@ To create a single, continuous wallpaper that flows correctly across the top and
 
 Only the first two sections (Top and Bottom) contain artwork; the third section **MUST** be completely empty (transparent).
 
-```mermaid
-graph TD
-    subgraph Master_Canvas [Master Wallpaper Canvas: 1920px x 480px]
-    direction LR
-        TS[Top Screen Section<br>640px x 480px<br>Pixels 0 to 640<br><br>Art/Background 1]
-        BS[Bottom Screen Section<br>640px x 480px<br>Pixels 640 to 1280<br><br>Art/Grid Background]
-        ES[Empty Section<br>640px x 480px<br>Pixels 1280 to 1920<br><br>Transparent]
-    end
-
-    Master_Canvas --> SliceTop["SPLIT POINT (X: 640)"]
-    SliceTop --> StackTop[TOP DISPLAY<br>640 x 480 Canvas]
-    StackTop --> Art1[Rendered Top Screen<br>Background/Logo]
-
-    Master_Canvas --> SliceMid["SPLIT POINT (X: 1280)"]
-    SliceMid --> StackBottom[BOTTOM DISPLAY<br>640 x 480 Canvas]
-    StackBottom --> Art2[Rendered Bottom Screen<br>Grid Icons/Carousel]
-
-    Master_Canvas --> FinalDiscard["Discard Section<br>(X: 1280+)"]
-    FinalDiscard -.-> DiscardLabel[Transparency ensures<br>correct VRAM padding]
-
-    %% Vertical Alignment on Device
-    Art1 === Art2
-    
-```
+[customization example](https://github.com/toniremi/canvas-ds/blob/main/customization%20examples/wallpaper-cut-example.png?raw=true)
