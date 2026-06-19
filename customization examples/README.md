@@ -76,4 +76,4 @@ To create a single, continuous wallpaper that flows correctly across the top and
 
 Only the first two sections (Top and Bottom) contain artwork; the third section **MUST** be completely empty (transparent).
 
-[customization example](https://github.com/toniremi/canvas-ds/blob/main/customization%20examples/wallpaper-cut-example.png?raw=true)
+![customization example](https://github.com/toniremi/canvas-ds/blob/main/customization%20examples/wallpaper-cut-example.png?raw=true)
