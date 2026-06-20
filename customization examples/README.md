@@ -27,9 +27,13 @@ This is a much simpler example that just changes wallpaper and colors.
 * **Colors:**: Applied custom colors to go with the wallpaper using purple and orange colors.
 * **Path:** `./zelda`
 
+**Pokemon Wallpaper Credit:** Artwork by [ravage_savage](https://www.reddit.com/user/ravage_savage/), sourced from customized dii-ess-aye theme found on [Reddit](https://www.reddit.com/r/ANBERNIC/comments/1sskt47/customized_rocknix_theme_diiessaye_for_rg_ds/).
+
 #### Zelda customization preview
 
 ![zelda_systemview.png](https://github.com/toniremi/canvas-ds/blob/main/previews/customization/zelda_systemview.png?raw=true)
+
+**Zelda Wallpaper Credit:** Artwork by [Yakami](https://wallhaven.cc/user/Yakami), sourced via [Wallhaven](https://wallhaven.cc/w/rqd87m).
 
 ---
 
