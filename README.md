@@ -52,11 +52,20 @@ The `enable_theme_rgds.sh` from **dii-ess-aye** theme will also change your them
 |  Neon  | System Grid & Icon | ![neon_top_systemview.png](https://github.com/toniremi/canvas-ds/blob/main/previews/neon_top_systemview.png?raw=true) | ![neon_bottom_systemview.png](https://github.com/toniremi/canvas-ds/blob/main/previews/neon_bottom_systemview.png?raw=true) |
 | SNES |    System Grid & Icon    | ![sness_top_systemview.png](https://github.com/toniremi/canvas-ds/blob/main/previews/sness_top_systemview.png?raw=true) | ![sness_bottom_systemview.png](https://github.com/toniremi/canvas-ds/blob/main/previews/sness_bottom_systemview.png?raw=true) |
 | Retro  |    Custom Grid 5X3 & Metadata Off    | ![retro_top_gameview.png](https://github.com/toniremi/canvas-ds/blob/main/previews/retro_top_gameview.png?raw=true) | ![retro_bottom_gameview.png](https://github.com/toniremi/canvas-ds/blob/main/previews/retro_bottom_gameview.png?raw=true) |
+| Famicom  |    Detailed Game View & Metadata On    | ![famicom_top_detailedview.png](https://github.com/toniremi/canvas-ds/blob/main/previews/famicom_top_detailedview.png?raw=true) | ![famicom_bottom_detailedview.png](https://github.com/toniremi/canvas-ds/blob/main/previews/famicom_bottom_detailedview.png?raw=true) |
 
 # **Configuration Options**
 
 - This theme has a simple set of options that can be changed directly from the UI Settings menu of EmulationStation.
 
+## **Gamelist Style**
+
+  - `Gamelist View Style` - sets the style of the gamelist View.
+
+    - `Detailed` - A simple text list of games and metadata on the bottom.
+    - `Grid` - A grid of boxart/video preview and minimal metadata below for games.
+
+  - `Default Grid Style` - Sets the rows/columns of the grid views. The theme will scale optimally based on the `Automatic Grid Rows/Columns` below if left as `Automatic`.
 
   ## **Theme Options**
 
