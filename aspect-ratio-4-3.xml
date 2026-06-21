@@ -51,8 +51,7 @@ based on 640x480
 
 	<!-- Logo Variations -->
 	<!-- ~~~~~~~~~~~~~ -->
-
-	<view name="grid" ifSubset="metadata:on">
+	<view name="detailed, grid" ifSubset="metadata:on">
 	    <image name="md_image">
             <pos>0.167 0.5</pos>
             <origin>0.5 0.5</origin>
@@ -78,7 +77,7 @@ based on 640x480
 		</image>
 	</view>
 
-	<view name="grid" ifSubset="metadata:off">
+	<view name="detailed, grid" ifSubset="metadata:off">
 	    <image name="md_image">
             <pos>0.167 0.5</pos>
             <origin>0.5 0.5</origin>
@@ -107,7 +106,7 @@ based on 640x480
 
 	<!-- Small Grid View Detailed-->
 	<!-- ~~~~~~~~~~~~~ -->
-	<view name="grid" ifSubset="font-size:small,metadata:on">
+	<view name="detailed, grid" ifSubset="font-size:small,metadata:on">
 	<!-- Metadata Toggle-->
 		<image name="md_marquee,md_thumbnail">
 			<visible>false</visible>
@@ -182,7 +181,7 @@ based on 640x480
 
 	<!-- Medium/Large Grid View-->
 	<!-- ~~~~~~~~~~~~~ -->
-	<view name="grid" ifSubset="font-size:medium|large,metadata:on">
+	<view name="detailed, grid" ifSubset="font-size:medium|large,metadata:on">
 
 		<!-- Metadata Toggle-->
 			<image name="md_marquee,md_thumbnail">
@@ -234,10 +233,47 @@ based on 640x480
 		</image>
 	</view>
 
-	<view name="grid" ifSubset="metadata:off">
+	<view name="detailed, grid" ifSubset="metadata:off">
 			<image name="md_marquee,md_thumbnail">
 				<visible>false</visible>
 			</image>
+	</view>
+
+	<view name="detailed">
+		<image name="game-list-background-shadow" extra="true">
+			<origin>0.5 0.5</origin>
+			<pos>${gamelistShadowPos}</pos>
+        <zIndex>2</zIndex>
+			<linearSmooth>true</linearSmooth>
+        <path>./_inc/images/gamelist/gamelist-background-shadow.webp</path>
+			<size>${gamelistShadowSize}</size>
+			<visible>true</visible>
+		</image>
+		<image name="game-list-background" extra="true">
+			<origin>0.5 0.5</origin>
+			<pos>${gamelistBackgroundPos}</pos>
+        <zIndex>3</zIndex>
+			<linearSmooth>true</linearSmooth>
+			<path>${gamelistBackgroundImageCalculated}</path>
+			<size>${gamelistBackgroundSize}</size>
+			<visible>true</visible>
+		</image>
+		<textlist name="gamelist">
+			<fontPath>${fontBold}</fontPath>
+			<selectorColor>${gamelistSelectorColor}</selectorColor>
+			<selectedColor>${gamelistSelectedColor}</selectedColor>
+			<primaryColor>${gamelistPrimaryColor}</primaryColor>
+			<secondaryColor>${gamelistSecondaryColor}</secondaryColor>
+			<horizontalMargin>0.008333333333333</horizontalMargin>
+			<zIndex>4</zIndex>
+			<origin>0.5 0.5</origin>
+			<pos>${gamelistPos}</pos>
+			<size>${gamelistSize}</size>
+			<fontSize>${gamelistFontSize}</fontSize>
+			<selectorHeight>${gamelistSelectorHeight}</selectorHeight>
+			<lines>${linecount}</lines>
+			<alignment>center</alignment>
+		</textlist>
 	</view>
 
 </theme>

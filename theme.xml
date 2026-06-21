@@ -273,7 +273,7 @@ Licnese: Creative Commons CC-BY-NC-SA
 	<!-- All Views -->
 	<!-- ~~~~~~~~~~ -->
 
-	<view name="system, grid">
+	<view name="system, detailed, grid">
         <helpsystem name="help">
             <pos>1 1</pos>
             <visible>false</visible>
@@ -407,7 +407,7 @@ Licnese: Creative Commons CC-BY-NC-SA
 
 	<!-- Gamelist: System Logo -->
 	<!-- ~~~~~~~~~~~~~ -->
-	<view name="grid">
+	<view name="detailed, grid">
 		<image name="logo" origin="0.5 0.5" linearSmooth="true">
 		    <pos>0.1667 0.44</pos>
 			<path>./_inc/systems/logos/${system.theme}.svg</path>
@@ -420,7 +420,7 @@ Licnese: Creative Commons CC-BY-NC-SA
 	</view>
 	<!-- Gamelist: Full Metadata Call-->
 	<!-- ~~~~~~~~~~~~~ -->
-	<view name="grid">
+	<view name="detailed, grid">
 		<image name="playtime-logo" origin="0.5 0.5" linearSmooth="true" extra="true">
 			<path>./_inc/images/playtime-icon.svg</path>
 			<zIndex>4</zIndex>
@@ -523,7 +523,7 @@ Licnese: Creative Commons CC-BY-NC-SA
 
 	<!-- Small Detailed Metadata Backgrounds -->
 	<!-- ~~~~~~~~~~~~~ -->
-	<view name="grid" ifSubset="font-size:small,metadata:on">
+	<view name="detailed, grid" ifSubset="font-size:small,metadata:on">
 		<!-- Start: Extended Metadata -->
 		<image name="game-metadata-background-shadow-extended" extra="true">
 			<origin>0.5 0.5</origin>
@@ -540,7 +540,7 @@ Licnese: Creative Commons CC-BY-NC-SA
 
 	<!-- Medium/Large Metadata Backgrounds -->
 	<!-- ~~~~~~~~~~~~~ -->
-	<view name="grid" ifSubset="font-size:medium|large,metadata:on">
+	<view name="detailed, grid" ifSubset="font-size:medium|large,metadata:on">
 		<image name="game-metadata-background-shadow-base" extra="true">
 			<origin>0.5 0.5</origin>
 			<zIndex>2</zIndex>
@@ -555,7 +555,7 @@ Licnese: Creative Commons CC-BY-NC-SA
 
 	<!-- Medium/Large Metadata Toggle -->
 	<!-- ~~~~~~~~~~~~~ -->
-	<view name="grid" ifSubset="font-size:medium|large,metadata:on">
+	<view name="detailed, grid" ifSubset="font-size:medium|large,metadata:on">
 		<text name="md_players">
 			<visible>false</visible>
 		</text>
@@ -581,7 +581,7 @@ Licnese: Creative Commons CC-BY-NC-SA
 
 	<!-- Off Metadata Toggle -->
 	<!-- ~~~~~~~~~~~~~ -->
-	<view name="grid" ifSubset="metadata:off">
+	<view name="detailed, grid" ifSubset="metadata:off">
 		<image name="game-metadata-background-shadow-base" extra="true">
 			<visible>false</visible>
 		</image>
