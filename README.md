@@ -26,6 +26,11 @@ This project is built using [**Canvas (ES Version)**](https://github.com/Siddy21
   - Or set the enable script to run at launch by opening the Advanced Game Options (remember you can access this by pressing X twice) and turning on that option
     - Optionally, set the enable script's metadata Hidden option if you don't want it to clutter the ports
 
+#### For Users who previously installed the DII-ESS-AYE theme.
+
+If you previously installed the [**dii-ess-aye**](https://github.com/beebono/dii-ess-aye) theme you still need to replace the `enable_theme_rgds.sh` and also copy the `start_es_rgds.sh` to the `/roms/ports` folder.
+
+The `enable_theme_rgds.sh` from **dii-ess-aye** theme will also change your theme selection so you will have to swap themes everytime you start your device. I rewrote the `enable_theme_rgds.sh` to be theme agnostic. This is also why we need to copy the `start_es_rgds.sh` into the `/roms/ports` folder so we do not need to go and search it in dii-ess-eye or canvas-ds folders.
 
 ### Uninstall
 1. If your enable script is set to auto start: Start Menu -> System Settings -> Frontend Developer Options -> Stop Running This Game At Startup
@@ -35,13 +40,6 @@ This project is built using [**Canvas (ES Version)**](https://github.com/Siddy21
   1. Go to Start Menu -> User Interface Settings -> Enable Show Hidden Files
   2. Go to your Ports section in EmulationStation and highlight the script
   3. Press X -> Edit This Game's Metadata -> Select the DELETE button at the bottom
-
-#### Users who previously installed the DII-ESS-AYE theme.
-
-If you previously installed the [**dii-ess-aye**](https://github.com/beebono/dii-ess-aye) theme you still need to replace the `enable_theme_rgds.sh` and also copy the `start_es_rgds.sh` to the `/roms/ports` folder.
-
-The `enable_theme_rgds.sh` from **dii-ess-aye** theme will also change your theme selection so you will have to swap themes everytime you launch. I rewrote the `enable_theme_rgds.sh` to be theme agnostic. This is also why we need to copy the `start_es_rgds.sh` into the /roms/ports folder so we do not need to go and search it in dii-ess-eye or canvas-ds folders.
-
 
 ### **Preview of some of the Variants, Font Sizes, and Color Schemes**
 
