@@ -277,7 +277,7 @@ Licnese: Creative Commons CC-BY-NC-SA
 	<!-- All Views -->
 	<!-- ~~~~~~~~~~ -->
 
-	<view name="system, detailed, grid">
+	<view name="system, detailed, gamecarousel, grid">
         <helpsystem name="help">
             <pos>1 1</pos>
             <visible>false</visible>
@@ -408,7 +408,7 @@ Licnese: Creative Commons CC-BY-NC-SA
 
 	<!-- Gamelist: System Logo -->
 	<!-- ~~~~~~~~~~~~~ -->
-	<view name="detailed, grid">
+	<view name="detailed, gamecarousel, grid">
 		<image name="logo" origin="0.5 0.5" linearSmooth="true">
 		    <pos>0.1667 0.44</pos>
 			<path>./_inc/systems/logos/${system.theme}.svg</path>
@@ -417,11 +417,14 @@ Licnese: Creative Commons CC-BY-NC-SA
 			<visible>true</visible>
 			<opacity>0.8</opacity>
 		</image>
-
+		<text name="gamecarouselLogoText">
+            <color>${helpTextColor}</color>
+            <fontSize>${indicatorFontSize}</fontSize>
+        </text>
 	</view>
 	<!-- Gamelist: Full Metadata Call-->
 	<!-- ~~~~~~~~~~~~~ -->
-	<view name="detailed, grid">
+	<view name="detailed, gamecarousel, grid">
 		<image name="playtime-logo" origin="0.5 0.5" linearSmooth="true" extra="true">
 			<path>./_inc/images/playtime-icon.svg</path>
 			<zIndex>4</zIndex>
@@ -524,7 +527,10 @@ Licnese: Creative Commons CC-BY-NC-SA
 
 	<!-- Small Detailed Metadata Backgrounds -->
 	<!-- ~~~~~~~~~~~~~ -->
-	<view name="detailed, grid" ifSubset="font-size:small,metadata:on">
+	<view
+        name="detailed, gamecarousel, grid"
+        ifSubset="font-size:small,metadata:on"
+    >
 		<!-- Start: Extended Metadata -->
 		<image name="game-metadata-background-shadow-extended" extra="true">
 			<origin>0.5 0.5</origin>
@@ -541,7 +547,10 @@ Licnese: Creative Commons CC-BY-NC-SA
 
 	<!-- Medium/Large Metadata Backgrounds -->
 	<!-- ~~~~~~~~~~~~~ -->
-	<view name="detailed, grid" ifSubset="font-size:medium|large,metadata:on">
+	<view
+        name="detailed, gamecarousel, grid"
+        ifSubset="font-size:medium|large,metadata:on"
+    >
 		<image name="game-metadata-background-shadow-base" extra="true">
 			<origin>0.5 0.5</origin>
 			<zIndex>2</zIndex>
@@ -582,7 +591,7 @@ Licnese: Creative Commons CC-BY-NC-SA
 
 	<!-- Off Metadata Toggle -->
 	<!-- ~~~~~~~~~~~~~ -->
-	<view name="detailed, grid" ifSubset="metadata:off">
+	<view name="detailed, gamecarousel, grid" ifSubset="metadata:off">
 		<image name="game-metadata-background-shadow-base" extra="true">
 			<visible>false</visible>
 		</image>
@@ -606,6 +615,23 @@ Licnese: Creative Commons CC-BY-NC-SA
 		<image name="playtime-logo">
 			<visible>false</visible>
 		</image>
+	</view>
+
+	<!-- Carousel Detailed View -->
+	<!-- ~~~~~~~~~~~ -->
+	<view name="gamecarousel">
+		<gamecarousel name="gamecarousel">
+			<zIndex>3</zIndex>
+			<type>vertical_wheel</type>
+			<size>1 1</size>
+			<logoScale>1.2</logoScale>
+			<color>00000000</color>
+			<logoRotation>-7</logoRotation>
+			<logoRotationOrigin>5 0.5</logoRotationOrigin>
+			<logoAlignment>center</logoAlignment>
+			<imageSource>marquee</imageSource>
+        <lineSpacing>1.2</lineSpacing>
+		</gamecarousel>
 	</view>
 
 	<!--

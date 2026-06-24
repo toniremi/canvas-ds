@@ -26,7 +26,7 @@ based on 640x480
             <gamelistSelectorHeight>0.039814814814815</gamelistSelectorHeight>
             <itemSizeCarousel>0.20 0.25</itemSizeCarousel>
             <metaDatafontSize>0.019</metaDatafontSize>
-            <descriptionPos>0.69</descriptionPos>
+            <descriptionPos>0.814</descriptionPos>
             <descriptionHeight>0.135</descriptionHeight>
             <descriptionFontSize>0.022</descriptionFontSize>
             <descriptionLineSpacing>1.35</descriptionLineSpacing>
@@ -50,8 +50,8 @@ based on 640x480
             <gamelistSelectorHeight>0.051388888888889</gamelistSelectorHeight>
             <itemSizeCarousel>0.20 0.25</itemSizeCarousel>
             <metaDatafontSize>0.027</metaDatafontSize>
-            <descriptionPos>0.656</descriptionPos>
-            <descriptionHeight>0.15</descriptionHeight>
+            <descriptionPos>0.814</descriptionPos>
+            <descriptionHeight>0.135</descriptionHeight>
             <descriptionFontSize>0.027</descriptionFontSize>
             <descriptionLineSpacing>1.5</descriptionLineSpacing>
             <linecount>13</linecount>
@@ -74,8 +74,8 @@ based on 640x480
             <gamelistSelectorHeight>0.06388888888889</gamelistSelectorHeight>
             <itemSizeCarousel>0.20 0.25</itemSizeCarousel>
             <metaDatafontSize>0.032</metaDatafontSize>
-            <descriptionPos>0.656</descriptionPos>
-            <descriptionHeight>0.15</descriptionHeight>
+            <descriptionPos>0.814</descriptionPos>
+            <descriptionHeight>0.135</descriptionHeight>
             <descriptionFontSize>0.032</descriptionFontSize>
             <descriptionLineSpacing>1.6</descriptionLineSpacing>
             <linecount>11</linecount>
