@@ -63,6 +63,7 @@ The `enable_theme_rgds.sh` from **dii-ess-aye** theme will also change your them
 
     - `Detailed` - A simple text list of games and metadata on the bottom.
     - `Grid` - A grid of boxart/video preview and minimal metadata below for games.
+    - `GameCarousel` - A carousel of game marquees and metadata on the left.
 
   - `Default Grid Style` - Sets the rows/columns of the grid views. The theme will scale optimally based on the `Automatic Grid Rows/Columns` below if left as `Automatic`.
 
