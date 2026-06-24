@@ -47,6 +47,7 @@ The `enable_theme_rgds.sh` from **dii-ess-aye** theme will also change your them
 | :----: | :------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------: |
 | Dark  |        System Grid & Art        | ![dark_top_systemview](https://github.com/toniremi/canvas-ds/blob/main/previews/dark_top_systemview.png?raw=true) | ![dark_bottom_systemview](https://github.com/toniremi/canvas-ds/blob/main/previews/dark_bottom_systemview.png?raw=true) |
 | Dark  |        Game Grid & Metadata On        | ![dark_top_gameview](https://github.com/toniremi/canvas-ds/blob/main/previews/dark_top_gameview.png?raw=true) | ![dark_bottom_gameview](https://github.com/toniremi/canvas-ds/blob/main/previews/dark_bottom_gameview.png?raw=true) |
+| Light  |        System Carousel & Art        | ![carousel_top_systemview.png](https://github.com/toniremi/canvas-ds/blob/main/previews/carousel_top_systemview.png?raw=true) | ![carousel_bottom_systemview.png](https://github.com/toniremi/canvas-ds/blob/main/previews/carousel_bottom_systemview.png?raw=true) |
 |  Neon  | System Grid & Icon | ![neon_top_systemview.png](https://github.com/toniremi/canvas-ds/blob/main/previews/neon_top_systemview.png?raw=true) | ![neon_bottom_systemview.png](https://github.com/toniremi/canvas-ds/blob/main/previews/neon_bottom_systemview.png?raw=true) |
 | SNES |    System Grid & Icon    | ![sness_top_systemview.png](https://github.com/toniremi/canvas-ds/blob/main/previews/sness_top_systemview.png?raw=true) | ![sness_bottom_systemview.png](https://github.com/toniremi/canvas-ds/blob/main/previews/sness_bottom_systemview.png?raw=true) |
 | Retro  |    Custom Grid 5X3 & Metadata Off    | ![retro_top_gameview.png](https://github.com/toniremi/canvas-ds/blob/main/previews/retro_top_gameview.png?raw=true) | ![retro_bottom_gameview.png](https://github.com/toniremi/canvas-ds/blob/main/previews/retro_bottom_gameview.png?raw=true) |
@@ -65,7 +66,12 @@ The `enable_theme_rgds.sh` from **dii-ess-aye** theme will also change your them
 
   - `Default Grid Style` - Sets the rows/columns of the grid views. The theme will scale optimally based on the `Automatic Grid Rows/Columns` below if left as `Automatic`.
 
-  ## **Theme Options**
+## **Theme Options**
+  
+  - `System View` - sets the style of the System View.
+
+    - `Grid` - A system grid with either System Icons or Game Artwork.
+    - `Carousel` - A system carousel with either System Icons or Game Artwork.
 
   - `System Grid Size` - sets the size of the `Grid` within the System View.
 
@@ -104,7 +110,8 @@ The `enable_theme_rgds.sh` from **dii-ess-aye** theme will also change your them
     - `Rating`
     - `Playtime`
 
-  ## **Gamelist Theme Options**
+
+## **Gamelist Theme Options**
 
   - `Metadata Image Type` - enables you to change the image above the metadata.
 
