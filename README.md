@@ -13,7 +13,7 @@ This project is built using [**Canvas (ES Version)**](https://github.com/Siddy21
 3. Slider setting bars are way too long.
 
 ### Install
-1. [Download](https://github.com/toniremi/canvas-ds/releases/download/1.0.2/canvas-ds.zip) or clone this repository. You can use the [release](https://github.com/toniremi/canvas-ds/releases) page to download the theme.
+1. [Download](https://github.com/toniremi/canvas-ds/releases/download/1.0.3/canvas-ds.zip) or clone this repository. You can use the [release](https://github.com/toniremi/canvas-ds/releases) page to download the theme.
 2. Copy the contents of this repository into your themes folder under a folder named `canvas-ds`
   - Either connect to your network share and put it in the `themes` folder
   - Or copy it to `/STORAGE/.config/emulationstation/themes/` directly
