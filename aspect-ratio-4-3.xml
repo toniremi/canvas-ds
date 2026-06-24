@@ -37,6 +37,21 @@ based on 640x480
 		</text>
 	</view>
 
+	<!-- System View Carousel -->
+	<!-- ~~~~~~~~~~~ -->
+
+	<view name="system" ifSubset="system-view:carousel">
+            <image name="gamesicon" extra="true">
+                <pos>0.02 0.05</pos>
+                <size>0 ${systemInfoFontSize}</size>
+            </image>
+            <text name="systemInfo">
+                <pos>0.025 0.05</pos>
+                <size>0 ${systemInfoFontSize}</size>
+                <fontSize>${systemInfoFontSize}</fontSize>
+		</text>
+	</view>
+
 
 	<!-- System View -->
 	<!-- ~~~~~~~~~~~ -->

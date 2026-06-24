@@ -42,6 +42,7 @@ Licnese: Creative Commons CC-BY-NC-SA
 
 	<subset name="system-view" displayName="System View">
       <include name="grid" displayName="Grid" />
+      <include name="carousel" displayName="Carousel" />
 	</subset>
 
    <!--
@@ -148,6 +149,9 @@ Licnese: Creative Commons CC-BY-NC-SA
 	<!-- ~~~~~~~~~~~~~ -->
 
 	<include ifSubset="system-view:grid">./_inc/system-view/grid.xml</include>
+	<include
+        ifSubset="system-view:carousel"
+    >./_inc/system-view/carousel.xml</include>
 
 	<!-- Screen View -->
 	<!-- ~~~~~~~~~~~ -->
@@ -364,21 +368,14 @@ Licnese: Creative Commons CC-BY-NC-SA
         </image>
 		<image name="gamesicon" extra="true">
 			<origin ifSubset="system-view:grid">1 0.5</origin>
+			<origin ifSubset="system-view:carousel">1 0.5</origin>
 			<path>./_inc/images/gamescount.svg</path>
 			<opacity>1</opacity>
 			<color>${systemInfoColor}</color>
 			<linearSmooth>true</linearSmooth>
 			<zIndex>3</zIndex>
 			<visible ifSubset="system-view:grid">true</visible>
-		</image>
-		<image name="countline" extra="true">
-			<origin>0.5 0.5</origin>
-			<path>./_inc/images/countline.svg</path>
-			<opacity>1</opacity>
-			<color>${systemInfoColor}</color>
-			<linearSmooth>true</linearSmooth>
-			<zIndex>3</zIndex>
-			<visible ifSubset="system-view:grid">false</visible>
+			<visible ifSubset="system-view:carousel">true</visible>
 		</image>
 		<text name="systemInfo">
 			<fontPath>${fontBold}</fontPath>
@@ -389,6 +386,10 @@ Licnese: Creative Commons CC-BY-NC-SA
             <fontSize>${systemDescriptionFontSize}</fontSize>
 		</text>
 		<text name="systemInfo" ifSubset="system-view:grid">
+			<origin>0 0.5</origin>
+			<alignment>left</alignment>
+		</text>
+		<text name="systemInfo" ifSubset="system-view:carousel">
 			<origin>0 0.5</origin>
 			<alignment>left</alignment>
 		</text>
