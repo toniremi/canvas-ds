@@ -21,9 +21,9 @@ This project is built using [**Canvas (ES Version)**](https://github.com/Siddy21
   - !!! NOTE: If you downloaded the theme as a zip, you may need to re-enable execution on the `enable_theme_*.sh` script either
               after extraction on your computer or on the device via ssh. Use `chmod +x enable_theme_*.sh` for either method.
 4. After updating your gamelists, open your ports section on your device and
-  - Either run the enable script every time you want to enable the theme
+  - Either run the `enable_theme_rgds.sh` script every time you want to enable the theme
     - (You will have to manually change the theme setting when you want to switch back)
-  - Or set the enable script to run at launch by opening the Advanced Game Options (remember you can access this by pressing X twice) and turning on that option
+  - Or set the `enable_theme_rgds.sh` script to run at launch by opening the Advanced Game Options (remember you can access this by pressing X twice) and turning on that option
     - Optionally, set the enable script's metadata Hidden option if you don't want it to clutter the ports
 
 #### For Users who previously installed the DII-ESS-AYE theme.
