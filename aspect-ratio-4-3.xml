@@ -323,11 +323,12 @@ based on 640x480
     		<visible>true</visible>
     	</image>
 
-        <image name="game-list-background" extra="true">
+        <image name="game-list-background-desc" extra="true">
     		<origin>0.5 0</origin>
     		<pos>0.5833 0.5500</pos>
     		<size>0.145 0.23</size>
     		<zIndex>11</zIndex>
+            <path>${gamelistBackgroundImageCalculated}</path>
     		<visible>true</visible>
     	</image>
     	<text name="md_description">
@@ -359,7 +360,7 @@ based on 640x480
 		<image name="game-list-background" extra="true">
 			<origin>0.5 0.5</origin>
 			<pos>${gamelistBackgroundPos}</pos>
-        <zIndex>3</zIndex>
+            <zIndex>3</zIndex>
 			<linearSmooth>true</linearSmooth>
 			<path>${gamelistBackgroundImageCalculated}</path>
 			<size>${gamelistBackgroundSize}</size>
