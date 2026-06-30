@@ -1,6 +1,8 @@
 # Canvas DS (Rocknix)
 
-Canvas DS is a heavily optimized, minimalist, and functional modification of the Canvas theme designed specifically for unique dual-screen and wide-aspect hardware layouts (running a resolution of 1920x480). It provides clean grid based system and game selection with custom-fit styling.
+**Canvas DS** is a dual screen adaptation of my favorite ES-DE theme Canvas-ES specifically targeting the Anbernic RD DS. 
+
+I tried to adapt and extend as much functionality from the original theme as possible to look good on a dual screen setup while remaining faithful to the original theme's colors, art, icons and layout.
 
 This project is built using [**Canvas (ES Version)**](https://github.com/Siddy212/canvas-es) as a core framework, heavily adapted to natively support dual-screen aspect ratios inspired by structural layouts from the [**dii-ess-aye**](https://github.com/beebono/dii-ess-aye) theme.
 
