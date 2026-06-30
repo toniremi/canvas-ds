@@ -278,7 +278,75 @@ based on 640x480
 			</image>
 	</view>
 
-	<view name="detailed">
+	<!-- Show also thumbnail and other data when metadata is on -->
+	<view name="detailed" ifSubset="metadata:on">
+    	<image name="game-list-background-shadow" extra="true">
+    		<origin>0.5 0</origin>
+    		<pos>0.4241 0.05</pos>
+    		<size>0.160 0.74</size>
+    		<zIndex>10</zIndex>
+    		<path>./_inc/images/gamelist/gamelist-background-shadow.webp</path>
+    		<visible>true</visible>
+    	</image>
+
+    	<image name="game-list-background" extra="true">
+    		<origin>0.5 0</origin>
+    		<pos>0.4241 0.07</pos>
+    		<size>0.149 0.70</size>
+    		<zIndex>11</zIndex>
+    		<path>${gamelistBackgroundImageCalculated}</path>
+    		<visible>true</visible>
+    	</image>
+
+    	<textlist name="gamelist">
+    		<origin>0.5 0</origin>
+    		<pos>0.4241 0.10</pos>
+    		<size>0.138 0.64</size>
+    		<fontPath>${fontBold}</fontPath>
+    		<selectorColor>${gamelistSelectorColor}</selectorColor>
+    		<selectedColor>${gamelistSelectedColor}</selectedColor>
+    		<primaryColor>${gamelistPrimaryColor}</primaryColor>
+    		<secondaryColor>${gamelistSecondaryColor}</secondaryColor>
+    		<horizontalMargin>0.005</horizontalMargin>
+    		<fontSize>${gamelistFontSize}</fontSize>
+    		<selectorHeight>${gamelistSelectorHeight}</selectorHeight>
+    		<lines>${linecount}</lines>
+    		<alignment>left</alignment>
+    		<zIndex>12</zIndex>
+    	</textlist>
+
+    	<image name="md_thumbnail">
+    		<origin>0.5 0</origin>
+    		<pos>0.5833 0.07</pos>
+    		<maxSize>0.135 0.43</maxSize>
+    		<zIndex>12</zIndex>
+    		<visible>true</visible>
+    	</image>
+
+        <image name="game-list-background" extra="true">
+    		<origin>0.5 0</origin>
+    		<pos>0.5833 0.5500</pos>
+    		<size>0.145 0.23</size>
+    		<zIndex>11</zIndex>
+    		<visible>true</visible>
+    	</image>
+    	<text name="md_description">
+    		<origin>0.5 0</origin>
+    		<pos>0.5833 0.5500</pos>
+    		<size>0.135 0.22</size>
+    		<fontPath>${fontBold}</fontPath>
+    		<fontSize>0.028</fontSize>
+    		<alignment>center</alignment>
+    		<autoScroll>vertical</autoScroll>
+    		<autoScrollSpeed>50</autoScrollSpeed>
+    		<autoScrollDelay>5000</autoScrollDelay>
+    		<zIndex>57</zIndex>
+    		<visible>true</visible>
+    	</text>
+    </view>
+
+    <!-- simple game list taking all available space when metadata is off -->
+	<view name="detailed" ifSubset="metadata:off">
 		<image name="game-list-background-shadow" extra="true">
 			<origin>0.5 0.5</origin>
 			<pos>${gamelistShadowPos}</pos>
