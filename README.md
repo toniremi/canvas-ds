@@ -1,12 +1,14 @@
 # Canvas DS (Rocknix)
 
-**Canvas DS** is a dual screen adaptation of my favorite ES-DE theme Canvas-ES specifically targeting the Anbernic RD DS. 
+**Canvas DS** is a dual screen adaptation of my favorite ES-DE theme Canvas-ES specifically targeting the Anbernic RG DS and RG DS Plus (added by Nelynes). 
 
 I tried to adapt and extend as much functionality from the original theme as possible to look good on a dual screen setup while remaining faithful to the original theme's colors, art, icons and layout.
 
 This project is built using [**Canvas (ES Version)**](https://github.com/Siddy212/canvas-es) as a core framework, heavily adapted to natively support dual-screen aspect ratios inspired by structural layouts from the [**dii-ess-aye**](https://github.com/beebono/dii-ess-aye) theme.
 
-### DISCLAIMER: This is an Anbernic RG-DS exclusive theme for ROCKNIX only.
+### DISCLAIMER: This is an Anbernic RG-DS / RG-DS Plus exclusive theme for ROCKNIX only.
+
+RG DS Plus support was added by **Nelynes**, not the original theme creator. It's new, so if the UI looks stretched, cropped, or misaligned across the two screens on an RG DS Plus, please open an issue with what you're seeing.
 
 # Known Issues (that won't be fixed)
 1. Keyboard and horizontally longer popups are incorrectly sized.

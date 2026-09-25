@@ -27,11 +27,12 @@ based on 640x480
 			<w>0.333</w>
 		</imagegrid>
 		<image name="gamesicon" extra="true">
+			<origin>0 0.5</origin>
             <pos>0.02 0.05</pos>
-            <size>0 ${systemInfoFontSize}</size>
+            <size>0.0145 ${systemInfoFontSize}</size>
 		</image>
 		<text name="systemInfoGrid">
-            <pos>0.025 0.05</pos>
+            <pos>0.045 0.05</pos>
 			<size>0 ${systemInfoFontSize}</size>
             <fontSize>${systemInfoFontSize}</fontSize>
 		</text>
@@ -41,14 +42,15 @@ based on 640x480
 	<!-- ~~~~~~~~~~~ -->
 
 	<view name="system" ifSubset="system-view:carousel">
-            <image name="gamesicon" extra="true">
-                <pos>0.02 0.05</pos>
-                <size>0 ${systemInfoFontSize}</size>
-            </image>
-            <text name="systemInfo">
-                <pos>0.025 0.05</pos>
-                <size>0 ${systemInfoFontSize}</size>
-                <fontSize>${systemInfoFontSize}</fontSize>
+        <image name="gamesicon" extra="true">
+            <origin>0 0.5</origin>
+            <pos>0.02 0.05</pos>
+        	<size>0.0145 ${systemInfoFontSize}</size>
+        </image>
+        <text name="systemInfo">
+            <pos>0.045 0.05</pos>
+            <size>0 ${systemInfoFontSize}</size>
+            <fontSize>${systemInfoFontSize}</fontSize>
 		</text>
 	</view>
 

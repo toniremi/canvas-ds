@@ -170,7 +170,7 @@ Licnese: Creative Commons CC-BY-NC-SA
       <stackpanel name="system-indicators" extra="true">
         <visible>true</visible>
          <h>${indicatorFontSize}</h>
-         <pos>0.25 0.027</pos><!-- 0 20 -->
+         <pos>0.1 0.027</pos><!-- 0 20 -->
          <!--<pos>0 0.027</pos> 0 20 -->
          <orientation>horizontal</orientation>
          <clock name="system-clock">
